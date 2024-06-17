@@ -1,4 +1,4 @@
-package org.example;
+package org.example.homework_25;
 
 import org.junit.jupiter.api.*;
 
