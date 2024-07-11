@@ -27,7 +27,7 @@ public class Main {
 
             synchronized (isWritingPossible) {
                 try (FileOutputStream outputStream = new FileOutputStream(packagePath + "out.txt", true)) {
-                    String toWrite = twoFibonacciNumbers[0] + "\n";
+                    String toWrite = "фібоначі: " + twoFibonacciNumbers[0] + "\n";
                     outputStream.write(toWrite.getBytes());
                 } catch (IOException e) {
                     System.out.println("error: " + e.getMessage());
@@ -57,7 +57,7 @@ public class Main {
 
             synchronized (isWritingPossible) {
                 try (FileOutputStream outputStream = new FileOutputStream(packagePath + "out.txt", true)) {
-                    String toWrite = result + "\n";
+                    String toWrite = "сума чисел: "  + result + "\n";
                     outputStream.write(toWrite.getBytes());
                 } catch (IOException e) {
                     System.out.println("error: " + e.getMessage());
@@ -81,7 +81,7 @@ public class Main {
                 if (phone.length() == 13 && phone.charAt(0) == '+') {
                     isPhoneValid = getIsPhoneValid(phone);
                     if (isPhoneValid) {
-                        toWrite.append(phone).append("\n");
+                        toWrite.append(phone).append(" ");
                     }
                 }
             }
@@ -89,6 +89,7 @@ public class Main {
 
             synchronized (isWritingPossible) {
                 try (FileOutputStream outputStream = new FileOutputStream(packagePath + "out.txt", true)) {
+                    toWrite = new StringBuilder("номери телефонів: ").append(toWrite);
                     outputStream.write(toWrite.toString().getBytes());
                 } catch (IOException e) {
                     throw new RuntimeException(e);
