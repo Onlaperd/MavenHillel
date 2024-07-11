@@ -70,7 +70,7 @@ public class Main {
             String[] phones;
             StringBuilder toWrite = new StringBuilder();
             try (Scanner inputStream = new Scanner(new FileInputStream(packagePath + "test.txt"))) {
-                phones = inputStream.nextLine().split("; ");
+                phones = inputStream.nextLine().split(" ");
             } catch (FileNotFoundException e) {
                 throw new RuntimeException(e);
             }
