@@ -115,18 +115,7 @@ public class Main {
     private static boolean getIsPhoneValid(String elem) {
         int isPhoneValid = -12;
         for (int i = 0; i < elem.length(); i++) {
-            if (
-                    elem.charAt(i) == '1' ||
-                            elem.charAt(i) == '2' ||
-                            elem.charAt(i) == '3' ||
-                            elem.charAt(i) == '4' ||
-                            elem.charAt(i) == '5' ||
-                            elem.charAt(i) == '6' ||
-                            elem.charAt(i) == '7' ||
-                            elem.charAt(i) == '8' ||
-                            elem.charAt(i) == '9' ||
-                            elem.charAt(i) == '0'
-            ) {
+            if (elem.charAt(i) == '1' || elem.charAt(i) == '2' || elem.charAt(i) == '3' || elem.charAt(i) == '4' || elem.charAt(i) == '5' || elem.charAt(i) == '6' || elem.charAt(i) == '7' || elem.charAt(i) == '8' || elem.charAt(i) == '9' || elem.charAt(i) == '0') {
                 isPhoneValid++;
             }
         }
